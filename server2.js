@@ -125,13 +125,13 @@ async function sendMails() {
             eTime = eTime.getTime() / 60000 | 0
 
             if (now == eTime) {
-                sgMail.setApiKey('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')
+                sgMail.setApiKey('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')
 
                 const msg = {
                     to: result[i].email,
                     from: 'boddu.manikanta.raju@gmail.com',
                     subject: 'Sending mail with SendGrid',
-                    text: result[i].content,
+                    text: JSON.stringify(result[i].content),
                     html: '<strong>Node.js Test</strong>',
                 }
                 sgMail
